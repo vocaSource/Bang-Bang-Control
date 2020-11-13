@@ -26,13 +26,13 @@ void loop() {
   Serial.println(raw_dist);
 //  myservo.writeMicroseconds(1400);  while(1){}
   if(raw_dist > 255){
-    myservo.writeMicroseconds(900); //  올리기
+    myservo.writeMicroseconds(900); //  upper the board
     delay(1000);
   }
   else{
-    myservo.writeMicroseconds(1400); // 수평
+    myservo.writeMicroseconds(1400); // flatten the board
     delay(1000);
-    myservo.writeMicroseconds(1800); // 내리기
+    myservo.writeMicroseconds(1800); // lower the board
     delay(1000);
   }
 }
